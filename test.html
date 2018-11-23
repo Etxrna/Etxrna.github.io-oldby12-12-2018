@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="script.js"></script>
+<meta charset = "utf-8">
+<title>ETXRNA | Home</title>
+<link rel="icon" href="https://is4-ssl.mzstatic.com/image/thumb/Purple127/v4/43/3c/3c/433c3c31-1608-8dee-6aef-dc4cabd43a99/DiskSpeedTest.png/1200x630bb.jpg" type="image/jpg">
+<meta http-equiv="X-UA-Compatible" content= "IE=edge">
+<meta name="viewpoint" content="width=device-width; initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.background{
+    background-color: #111111   
+ }
+.jumbotron{
+    background-color:#2E2D88;
+    color:white;
+}
+.tab-content{
+   border-left: 1px solid #ddd;
+   border-right: 1px solid #ddd;
+   border-bottom: 1px solid #ddd;
+   padding: 10px
+}
+.nav-tabs{
+   margin-bottom: 0;            
+}
+.top-leftButtonHome{
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    font-size: 30px;
+}
+.top-rightButton1{
+    position: absolute;
+    top: 45px;
+    right:270px;
+    font-size: 18px;
+}
+.top-rightButton2{
+    position: absolute;
+    top: 45px;
+    right: 160px;
+    font-size: 18px;
+}
+.top-rightButton3{
+    position: absolute;
+    top: 45px;
+    right: 50px;
+    font-size: 18px;
+}
+.centerSlides{
+   position: absolute;
+   top: 130px;
+   left: 280px;
+}
+.display-4{
+    font-size: 50px;     
+}
+.jumbotron{
+     width: 400px;   
+}
+    
+.mySlides {display:none;}
+</style>
+<body>
+
+<img src="BG.jpg" class="img-fluid" alt="Responsive image">
+
+<div class="containerm">
+<div class="row">
+<div class="col-md-0">
+    <button type="button" class="btn btn-primary btn-xl, top-leftButtonHome">ETXRNA HOME</button>
+</div>
+<div class="col-md-13">
+    <button type="button" class="btn btn-primary btn-xl, top-rightButton1">The Overlooked</button>
+</div>
+<div class="col-md-14">
+    <button type="button" class="btn btn-primary btn-xl, top-rightButton2">Classified</button>
+</div>
+<div class="col-md-15">
+    <button type="button" class="btn btn-primary btn-xl, top-rightButton3">Classified</button>
+</div>
+</div>
+</div>
+
+<div class="w3-content w3-display-container,, centerSlides">
+<img class="mySlides" src="img_snowtops.jpg" style="width:100%">
+<img class="mySlides" src="BG.jpg" style="width:100%">
+<img class="mySlides" src="construction.jpg" style="width:100%">
+<img class="mySlides" src="construction2.jpg" style="width:100%">
+
+<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+<div class="jumbotron">
+<h1 class="display-4">Updates</h1>
+<p class="lead">None</p>
+</div>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>
